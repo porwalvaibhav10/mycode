@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= spproduct.name %></title>
+</head>
+<body>
+    <h1>details of <%=spproduct.name%></h1>
+    <h1><%= spproduct.name %></h1>
+    <ul>
+        <li>pirce: $<%= spproduct.price %></li>
+        <li>pirce: <a href="/products?category=<%=spproduct.category%>"><%=spproduct.category%></a></li>
+    </ul>
+
+    <a href="/products"><button>tap to see all</button></a>
+    <a href="/products/<%=spproduct._id%>/edit">Edit</a>
+    <form action="/products/<%=spproduct._id%>?_method=delete" method="post">
+        <button>Delete</button>
+    </form>
+
+    
+</body>
+</html>
